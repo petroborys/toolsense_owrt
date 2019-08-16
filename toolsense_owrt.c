@@ -8,6 +8,8 @@
 #include <stdbool.h>
 #include <mosquitto.h>
 
+#include "functions.h"
+
 #define DELAY_SEND_TIME 5 //sec
 // #define PORT 10333
 #define PORT_SSL 20333
@@ -109,6 +111,11 @@ int send_time()
 
 int main(int argc, char *argv[])
 {
+
+	//functions.c
+	int d = add(2,3);
+	printf("\nSum 2+3 = %d\n\n", d);
+
 	printf("\nMosquitto test SSL\n\n");
 
 	mqtt_init();
